@@ -1,0 +1,186 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	font-family: PT sans;
+}
+
+body {
+	background: #111010;
+	color: white;
+	width: 100%;
+	height: 100%;
+}
+
+nav {
+	float: right;
+	margin-top: 2.5rem;
+}
+
+nav ul li{
+	font-size: 2rem;
+	float: left;
+	margin: 2rem;
+}
+
+nav ul li.slash{
+	font-size: 5rem;
+	color: #6fbc0c;
+}
+
+nav ul li:last-child {
+	margin-right: 1rem;
+}
+
+.hero {
+	background: url(images/hero-background.jpg) no-repeat center bottom;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.hero .cds-logo {
+	padding: 50px 70px;
+}
+
+.hero .hero-content {
+	margin: 5% auto;
+	text-align: center;
+	width: 90%;
+}
+
+.hero .hero-content img {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	width: 200px;
+}
+
+.hero .hero-content h1 {
+	font-size: 3rem;
+	margin-bottom: 30px
+}
+
+.hero .hero-content h4 {
+	font-size: 1.5rem;
+	margin-bottom: 60px;
+	margin-top: 60px;
+}
+
+.hero button {
+	padding: 30px 100px;
+   	font-size: 1.35rem;
+    margin: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.hero button.green {
+	background: #6fbc0c;
+	color: #ffffff;
+}
+
+.hero button.white {
+	background: #ffffff;
+	color: #6fbc0c;
+}
+
+.cards {
+	background: url(images/card-background.jpg) no-repeat center top;
+	background-size: cover;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
+		
+}
+
+.card {
+	background: #6fbc0c;
+	height: 50%;
+	width: 33.3%;
+}
+
+.company {
+	height: 100%;
+	width: 100%;
+}
+
+.stats {
+	background: url(images/stats-background.jpg) no-repeat center center;
+	background-size: cover;
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+.about {
+	background: url(images/about-background.jpg) no-repeat center center;
+	background-size: cover;
+	width: 60%;
+	height: 100%;
+	float: right;	
+}
+
+.contact {
+	background: url(images/contact-background.jpg) no-repeat center bottom;
+	background-size: cover;
+	width: 100%;
+	height: 60%;
+}
+
+footer {
+	background: url(images/footer-background.jpg) no-repeat center bottom;
+	background-size: cover;
+	width: 100%;
+	height: 40%;
+}
