@@ -48,14 +48,18 @@ table {
 }
 
 html {
-	width: 100%;
 	font-family: PT sans;
+	width: 100%;
 }
 
 body {
 	background: #fafafa;
 	color: white;
 	width: 100%;
+}
+
+button:focus {
+	outline:0;
 }
 
 nav {
@@ -86,8 +90,8 @@ nav ul li::after{
 	display: block;
 	font-size: 2rem;
 	position: absolute;
-	top: -10px;
 	right: -40px;
+	top: -10px;
 }
 
 nav ul li:last-child {
@@ -100,7 +104,7 @@ nav ul li:last-child {
 	width: 100%;
 }
 
-.hero .cds-logo {
+.hero .hero-logo {
 	padding: 50px 70px;
 }
 
@@ -361,7 +365,7 @@ footer .footer-flex-container p{
 }
 
 @media only screen and (max-width : 800px) {
-	.hero .cds-logo {
+	.hero .hero-logo {
 		margin: 0 auto;
     	display: block;
 	}
