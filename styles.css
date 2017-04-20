@@ -174,7 +174,7 @@ nav ul li:last-child {
 
 .cards-title {
 	color: #2c65b0;
-	padding: 200px 0 100px 0;
+	padding: 50px 0 30px 0;
 	text-align: center;
 }
 
@@ -223,7 +223,7 @@ nav ul li:last-child {
 	background: none;
 	color: #000000;
 	height: 50%;
-	margin: 2%;
+	margin: 1%;
 	text-align: center;
 	width: 29%;
 }

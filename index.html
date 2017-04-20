@@ -219,8 +219,13 @@
         </div>  
         <script>
 
-            // $('.cards-slide-container').panelSnap();
+            $(".cards-slide-container").panelSnap();
             
+            $(".cards-slide-container").mouseenter(function(){
+                $("html, body").animate({
+                    scrollTop: $(".cards-slide-container").offset().top
+                }, 1000);
+            });
             // $(function(){
             //     $('.cards-slide-container').cards()
             // });
