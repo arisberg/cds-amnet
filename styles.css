@@ -49,31 +49,45 @@ table {
 
 html {
 	width: 100%;
-	height: 100%;
 	font-family: PT sans;
 }
 
 body {
-	background: #111010;
+	background: #fafafa;
 	color: white;
 	width: 100%;
-	height: 100%;
 }
 
 nav {
 	float: right;
-	margin-top: 2.5rem;
+	margin-top: 3rem;
+	text-align: center;
 }
 
 nav ul li{
-	font-size: 2rem;
-	float: left;
+	display: inline-block;
+	font-size: 1.5rem;
 	margin: 2rem;
+	position: relative;
 }
 
-nav ul li.slash{
-	font-size: 5rem;
+nav ul li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+nav li:last-child::after {
+	display: none;
+}
+
+nav ul li::after{
+	content: "/";
 	color: #6fbc0c;
+	display: block;
+	font-size: 2rem;
+	position: absolute;
+	top: -10px;
+	right: -40px;
 }
 
 nav ul li:last-child {
@@ -84,7 +98,6 @@ nav ul li:last-child {
 	background: url(images/hero-background.jpg) no-repeat center bottom;
 	background-size: cover;
 	width: 100%;
-	height: 100%;
 }
 
 .hero .cds-logo {
@@ -92,7 +105,7 @@ nav ul li:last-child {
 }
 
 .hero .hero-content {
-	margin: 5% auto;
+	margin: 0 auto;
 	text-align: center;
 	width: 90%;
 }
@@ -116,11 +129,13 @@ nav ul li:last-child {
 }
 
 .hero button {
+	border-radius: 10px;
+    border: none;
 	padding: 30px 100px;
    	font-size: 1.35rem;
     margin: 20px;
-    border-radius: 10px;
-    border: none;
+    margin-bottom: 15%;
+    cursor: pointer;
 }
 
 .hero button.green {
@@ -133,54 +148,268 @@ nav ul li:last-child {
 	color: #6fbc0c;
 }
 
-.cards {
+.cards-slide-container {
 	background: url(images/card-background.jpg) no-repeat center top;
 	background-size: cover;
+	height: 1500px;
+	overflow: scroll;
+	position: relative;
+}
+
+.cards-slide-container::-webkit-scrollbar { 
+    display: none; 
+}
+
+.cards-slide {
+	height: 100%;
+}
+
+.cards-slide:first-child{
+	display: block;
+}
+
+.cards-title {
+	color: #2c65b0;
+	padding: 200px 0 100px 0;
+	text-align: center;
+}
+
+.cards-title h1 {
+	font-size: 3rem;
+}
+
+.cards {
 	display: flex;
 	flex-wrap: wrap;
-	height: 100%;
 	justify-content: center;
-	width: 100%;
-		
+	width: 100%;	
+}
+
+.card img {
+	margin-bottom: 1rem;
+	vertical-align: middle;
+	width: 50px;
+}
+
+.card h2 {
+	font-size: 1.75rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.card h3 {
+	color: #6fbc0c;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+.card h4 {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.card p {
+	line-height: 1.75rem;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 .card {
-	background: #6fbc0c;
+	background: none;
+	color: #000000;
 	height: 50%;
-	width: 33.3%;
+	margin: 2%;
+	text-align: center;
+	width: 29%;
 }
 
-.company {
-	height: 100%;
+.card > div {
+	height: 130px;
+    line-height: 130px;
+}
+
+.info {
+	display: flex;
 	width: 100%;
 }
 
 .stats {
 	background: url(images/stats-background.jpg) no-repeat center center;
 	background-size: cover;
-	width: 40%;
-	height: 100%;
-	float: left;
+	padding: 5%;
+	width: 30%;
+}
+
+.stats h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.stats p {
+	font-size: 1.35rem;
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.stats img {
+	margin-top: 3rem;
+	width: 100%;
+}
+
+.stats .highlight::first-line { 
+    color: #6fbc0c;
 }
 
 .about {
 	background: url(images/about-background.jpg) no-repeat center center;
 	background-size: cover;
-	width: 60%;
-	height: 100%;
-	float: right;	
+	display: flex;
+	justify-content: center;
+	padding: 5%;
+	width: 50%;
+}
+
+.about .column {
+	margin: 0 4%;
+}
+
+.about .column h1 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-top: 3rem;
+}
+
+.about .column h2 {
+	font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.about .column p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.about .column ul li {
+	margin-bottom: 0.5rem;
+}
+
+.about .column ul li i {
+	margin-right: 1rem;
 }
 
 .contact {
 	background: url(images/contact-background.jpg) no-repeat center bottom;
 	background-size: cover;
+	clear: both;
+	color: #000000;
+	overflow: hidden;
+	text-align: center;
 	width: 100%;
-	height: 60%;
+}
+
+.contact-flex-container {
+	display: flex;
+	justify-content: center;
+
+}
+
+.contact h1 {
+	color: #2c65b0;
+	font-size: 3rem;
+	margin-top: 3rem;
+}
+
+.contact h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+.contact .contact-block {
+	margin: 4rem;
+}
+
+.contact .contact-block i {
+	margin-right: 1rem;
 }
 
 footer {
 	background: url(images/footer-background.jpg) no-repeat center bottom;
 	background-size: cover;
+	text-align: center;
 	width: 100%;
-	height: 40%;
+}
+
+footer img {
+	margin: 2rem 0;
+}
+
+footer h3 {
+	font-size: 1.25rem;
+}
+
+footer .footer-flex-container {
+	display: flex;
+	justify-content: center;
+}
+
+footer .footer-flex-container p{
+	margin: 2rem;
+}
+
+@media only screen and (max-width : 800px) {
+	.hero .cds-logo {
+		margin: 0 auto;
+    	display: block;
+	}
+
+	nav {
+		float: none;
+		margin-top: 0;
+	}
+
+	nav ul li {
+		font-size: 1rem;
+	}
+
+	.hero .hero-content h1 {
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+
+	.hero button {
+		padding: 10px 10px;
+		margin-bottom: 45%;
+	}
+
+	.cards-slide-container {
+		height: auto;
+	}
+
+	.cards {
+		display: block;
+	}
+
+	.card {
+		margin: 0;
+		width: 100%;
+	}
+
+	.info {
+		display: block;
+	}
+
+	.stats {
+		padding: 0;
+		width: 100%;
+	}
+
+	.about {
+		display: block;
+		padding: 5rem 0px;
+		width: 100%;
+	}
 }
