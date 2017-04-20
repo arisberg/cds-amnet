@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1; 
 }
 ol, ul {
 	list-style: none;
@@ -389,6 +389,10 @@ footer .footer-flex-container p{
 		height: auto;
 	}
 
+	.cards-slide {
+		height: auto;
+	}
+
 	.cards {
 		display: block;
 	}
@@ -403,7 +407,8 @@ footer .footer-flex-container p{
 	}
 
 	.stats {
-		padding: 0;
+		padding: 60px;
+    	box-sizing: border-box;
 		width: 100%;
 	}
 
