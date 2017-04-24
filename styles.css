@@ -279,8 +279,8 @@ nav ul li:last-child {
 }
 
 .stats img {
-	margin-top: 3rem;
-	width: 100%;
+	display: block;
+	margin: 3rem auto;
 }
 
 .stats .highlight::first-line { 
@@ -359,6 +359,10 @@ nav ul li:last-child {
 	margin-right: 1rem;
 }
 
+.contact .contact-info .contact-block li {
+	margin-bottom: 1rem;
+}
+
 /*Footer*/
 
 footer {
@@ -409,8 +413,12 @@ footer p {
 	.hero-content a {
 		display: inline-block;
 		padding: 10px 10px;
-		margin-bottom: 45%;
+		margin-bottom: 5%;
 		width: 10rem;
+	}
+
+	.hero-content a:last-child {
+		margin-bottom: 45%;
 	}
 
 	.cards {
@@ -419,6 +427,7 @@ footer p {
 
 	.card {
 		margin: 0;
+		padding: 2rem;
 		width: 100%;
 	}
 
@@ -437,7 +446,7 @@ footer p {
 
 	.about {
 		display: block;
-		padding: 5rem 4rem;
+		padding: 7rem 4rem;
 		width: 100%;
 	}
 }
