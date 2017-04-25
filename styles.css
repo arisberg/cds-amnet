@@ -5,6 +5,7 @@
 
 /* Table of Contents
 	* Reset
+	* Flex Classes
 	* Nav
 	* Hero
 	* Cards
@@ -68,8 +69,16 @@ html {
 	width: 100%;
 }
 
+body {
+	background: #fafafa;
+	color: white;
+	width: 100%;
+}
+
+/*Flex Classes*/
+
 .wrapper {
-	display: flex;
+		display: flex;
 }
 
 .justify-center {
@@ -80,23 +89,17 @@ html {
 	flex-wrap: wrap;
 }
 
-body {
-	background: #fafafa;
-	color: white;
-	width: 100%;
-}
-
 /*Nav*/
 
 nav {
-	float: right;
-	margin-top: 3rem;
-	text-align: center;
-}
+		float: none;
+		margin-top: 0;
+		text-align: center;
+	}
 
 nav ul li{
 	display: inline-block;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	margin: 2rem;
 	position: relative;
 }
@@ -133,11 +136,14 @@ nav ul li:last-child {
 }
 
 .branding {
-	display: inline-block;
-}
+		display: block
+	}
 
 .branding img {
-	padding: 50px 70px;
+	display: block;
+	margin: 0 auto;
+	padding: 2rem;
+	
 }
 
 .hero .hero-content {
@@ -154,8 +160,8 @@ nav ul li:last-child {
 }
 
 .hero .hero-content h1 {
-	font-size: 3rem;
-	margin-bottom: 30px
+	font-size: 2rem;
+	margin-bottom: 20px
 }
 
 .hero .hero-content h4 {
@@ -169,12 +175,12 @@ nav ul li:last-child {
     border: none;
     cursor: pointer;
     display: inline-block;
-	padding: 30px 100px;
+	padding: 10px 10px;
    	font-size: 1.35rem;
     margin: 20px;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     text-decoration: none;
-   	width: 20rem;
+   	width: 10rem;
 }
 
 .hero-content a.primary {
@@ -185,6 +191,10 @@ nav ul li:last-child {
 .hero-content a.secondary {
 	background: #ffffff;
 	color: #6fbc0c;
+}
+
+.hero-content a:last-child {
+	margin-bottom: 45%;
 }
 
 /*Cards*/
@@ -207,20 +217,17 @@ nav ul li:last-child {
 }
 
 .cards {
-	flex-wrap: wrap;
+	display: block;
 }
 
 .card {
 	background: none;
 	color: #000000;
 	height: 50%;
-	margin: 1rem;
+	margin: 0;
+	padding: 2rem;
 	text-align: center;
-	width: 29%;
-}
-
-.card.wide {
-	width: 50%;
+	width: 100%;
 }
 
 .card img {
@@ -263,8 +270,8 @@ nav ul li:last-child {
 .stats {
 	background: url(images/stats-background.jpg) no-repeat center center;
 	background-size: cover;
-	padding: 5%;
-	width: 40%;
+	padding: 60px;
+	width: 100%;
 }
 
 .stats h2 {
@@ -289,12 +296,15 @@ nav ul li:last-child {
 
 /*About*/
 
+.details {
+	display: block;
+}
+
 .about {
 	background: url(images/about-background.jpg) no-repeat center center;
 	background-size: cover;
-	display: flex;
-	padding: 5%;
-	width: 60%;
+	display: block;
+	padding: 7rem 4rem;
 }
 
 .about div {
@@ -386,67 +396,64 @@ footer p {
 
 /*Media Queries*/
 
-@media only screen and (max-width : 1000px) {
+@media only screen and (min-width : 1000px) {
 	.branding {
-		display: block
+		display: inline-block;
 	}
 
 	.branding img {
-		margin: 0 auto;
-		display: block;
+		padding: 50px 70px;
 	}
 
 	nav {
-		float: none;
-		margin-top: 0;
+		float: right;
+		margin-top: 3rem;
 	}
 
 	nav ul li {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	.hero .hero-content h1 {
-		font-size: 2rem;
-		margin-bottom: 20px;
+		font-size: 3rem;
+		margin-bottom: 30px;
 	}
 
 	.hero-content a {
-		display: inline-block;
-		padding: 10px 10px;
-		margin-bottom: 5%;
-		width: 10rem;
+		padding: 30px 100px;
+		margin-bottom: 15%;
+		width: 20rem;
 	}
 
 	.hero-content a:last-child {
-		margin-bottom: 45%;
+		margin-bottom: 0;
 	}
 
 	.cards {
-		display: block;
+		flex-wrap: wrap;
 	}
 
 	.card {
-		margin: 0;
-		padding: 2rem;
-		width: 100%;
+		margin: 1rem;
+		padding: 0;
+		width: 29%;
 	}
 
 	.card.wide {
-		width: 100%;
+		width: 50%;
 	}
 
-	.detials {
-		display: block;
+	.details {
+		display: flex;
 	}
 
 	.stats {
-		padding: 60px;
-		width: 100%;
+		padding: 5%;
+		width: 40%;
 	}
 
 	.about {
-		display: block;
-		padding: 7rem 4rem;
-		width: 100%;
+		display: flex;
+		padding: 5%;
 	}
 }
